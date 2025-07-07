@@ -177,18 +177,82 @@
 ---
 
 ## 🔗 相关工作
-- 浙江大学课程攻略共享计划
-- 北京大学课程资料民间整理
-- 北大计算机课程大作业
-- 清华大学计算机系课程攻略
-- 东南大学课程共享计划
-- 中国科学技术大学计算机学院课程资源
-- 西安交通大学课程资料共享计划
-- 上海交通大学课程资料分享
-- 中山大学课程资料分享
-- 南京大学课程复习资料
-- 郑州大学课程复习资料
-- 东北大学机器人课程攻略 共享计划
-- 西安交通大学自动化专业课程资料分享
+- [浙江大学课程攻略共享计划](https://github.com/QSCTech/zju-icicles)
+- [北京大学课程资料民间整理](https://github.com/lib-pku/libpku)
+- [北大计算机课程大作业](https://github.com/PKUanonym/REKCARC-TSC-UHT)
+- [清华大学计算机系课程攻略](https://github.com/PKUanonym/REKCARC-TSC-UHT)
+- [东南大学课程共享计划](https://github.com/SEU-Share/SEU-Share)
+- [中国科学技术大学计算机学院课程资源](https://github.com/USTC-Resource/USTC-Course)
+- [西安交通大学课程资料共享计划](https://github.com/xjtu-share/xjtu-share)
+- [上海交通大学课程资料分享](https://github.com/SurviveSJTU/SurviveSJTUManual)
+- [中山大学课程资料分享](https://github.com/sysu-courses/sysu-courses)
+- [南京大学课程复习资料](https://github.com/NJU-ProjectN/nju-icicles)
+- [郑州大学课程复习资料](https://github.com/ZZU-Share/ZZU-Courses)
+- [东北大学机器人课程攻略 共享计划](https://github.com/NEU-COURSE-SHARE/NEU-COURSE-SHARE)
+- [西安交通大学自动化专业课程资料分享](https://github.com/xjtu-autox/xjtu-autox-courses)
 
 ---
+
+# 贡献指南
+
+## 目录结构建议
+
+建议按照如下结构组织课程资料（仅供参考，实际可根据需要调整）：
+
+```
+/课程名称/
+  /年份-学期/
+    /讲义/
+    /作业/
+    /实验/
+    /复习资料/
+    /其他/
+```
+
+例如：
+
+```
+/数据结构/
+  /2024-秋/
+    /讲义/
+    /作业/
+    /实验/
+    /复习资料/
+```
+
+> **注：** 也可以直接上传压缩包（如 zip/rar），后续由维护者或有意愿的同学统一整理。
+
+---
+
+## 提交与合并流程
+
+1. **Fork 本仓库**  
+   在 GitHub 上点击右上角 Fork 按钮，将本仓库复制到你的账户下。
+
+2. **新建分支**  
+   建议在你的仓库中新建分支（如 `add-课程名-资料`）进行资料整理。
+
+   ```bash
+   git checkout -b add-课程名-资料
+   ```
+
+3. **添加/上传资料**  
+   按照上述目录结构（或直接上传压缩包）添加你的课程资料。
+
+4. **提交更改并推送到你的 Fork**  
+   ```bash
+   git add .
+   git commit -m "添加 XX 课程资料"
+   git push origin add-课程名-资料
+   ```
+
+5. **发起 Pull Request**  
+   在 GitHub 上向本仓库提交 Pull Request，等待维护者审核合并。
+
+---
+
+## 其他说明
+
+- 文件命名尽量规范、简洁，便于检索。
+- 支持直接上传压缩包，后续可由维护者或同学整理。
+- 感谢你的贡献！
