@@ -1,0 +1,18 @@
+#hall-manageable-hall-list {
+
+}
+
+#hall-manageable-hall-list table {
+
+}
+
+#hall-manageable-hall-list td,
+#hall-manageable-hall-list th {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.manageable-hall-list-item:hover {
+    cursor: pointer;
+    text-decoration: none;
+}

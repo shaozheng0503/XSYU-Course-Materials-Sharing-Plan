@@ -1,0 +1,28 @@
+（1）Din到寄存器
+1	地址寄存器3	i	i	LWA		将i存入寄存器3		是
+2	数据寄存器RF	#data	未知	RFWr、WA	将#data存入R[i]		是
+（2）寄存器到存储器
+1	地址寄存器2	i	i	LA2		将i存入寄存器2		是
+2	地址寄存器1	0	0	LA1		为了输出0			是
+3	MUX1		x	x	AluYSel(1)	选择Din作为存储器地址	否
+4	存储器		R[i]	无	DMWr		寄存器到存储器		是
+（3）存储器到寄存器
+1	地址寄存器1	0	0	LA1		为了输出0			是
+2	地址寄存器2	i	i	LA2		将i存入寄存器2		是
+3	MUX1		x	x	AluYSel(1)	选择Din作为存储器地址	否
+4	存储器		R[i]	无	DMWr		读出存储器值		是
+5	MUX2		Do	Din	RWSel(10)	存储器到寄存器		否
+5	数据寄存器RF	Din	未知	RFWr、WA	数据存到寄存器		是
+（4）寄存器到寄存器
+1	地址寄存器1	0	0	LA1		为了输出0			是
+2	地址寄存器2	j	j	LA2		将j存入寄存器2		是
+3	MUX2		Do	Din	RWSel(01)	寄存器到寄存器		否
+4	寄存器3		i	i	LWA		将i存入寄存器3		是
+5	数据寄存器RF	Din	未知	RFWr、WA	将R[j]存入R[i]		是
+（5）运算后存入寄存器
+1	地址寄存器1	i	i	LA1		将i存入寄存器1		是
+2	地址寄存器2	j	j	LA2		将j存入寄存器2		是
+3	ALU		X、Y	S	AluOP		计算			否
+4	地址寄存器 3 	s	s	LWA		将s存入寄存器1		是
+5	MUX2		Do	Din	RWSel(01)	运算器到寄存器		否
+6	数据寄存器RF	Din	未知	RFWr、WA	将结果存入寄存器		是

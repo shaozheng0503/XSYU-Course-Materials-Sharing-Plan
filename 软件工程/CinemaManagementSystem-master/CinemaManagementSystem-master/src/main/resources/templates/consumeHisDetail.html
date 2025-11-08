@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>消费详情</title>
+    <!-- Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.css"/>
+    <!-- font-asesome图标库 -->
+    <link rel="stylesheet" type="text/css" href="/css/font-awesome.min.css"/>
+
+    <!-- 引入css样式文件 -->
+    <link rel="stylesheet" type="text/css" href="/css/common.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/consumeHisDetail.css"/>
+
+    <!-- 引入js脚本文件 -->
+    <!-- jquery -->
+    <script src="/js/jquery.js"></script>
+    <!-- Bootstrap 核心 JavaScript 文件 -->
+    <script src="/js/bootstrap.js"></script>
+    <script src="/js/request.js"></script>
+    <script src="/js/consumeHisDetail.js"></script>
+
+</head>
+<body>
+<div class="nav-top-container">
+    <div class="nav-logo title">NJU-Se电影购票系统</div>
+    <ul class="nav nav-pills">
+        <li role="presentation"><a href="/user/home">首页</a></li>
+        <li role="presentation"><a href="/user/movie">电影</a></li>
+    </ul>
+    <div class="btn-group">
+        <button class="nav-user-container btn dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <img class="avatar-sm" src="/images/defaultAvatar.jpg" />
+            <span class="gray-text" style="vertical-align: middle" th:text="${session.user.username}"><span class="caret"></span></span>
+        </button>
+        <ul class="dropdown-menu">
+            <li><a href="/user/history/consume">消费记录</a></li>
+            <li><a href="/user/history/topup">充值记录</a></li>
+            <li><a href="/user/edit">修改密码</a></li>
+            <li><a href="/user/buy">电影票</a></li>
+            <li><a href="/user/member">卡包</a></li>
+            <li id="logout"><a href="#">登出</a></li>
+        </ul>
+    </div>
+</div>
+<div class="content-container">
+    <div class="card">
+        <div class="header">
+            <div class="title">消费详情</div>
+            <button class="btn btn-primary" onclick="back()">返回</button>
+        </div>
+        <div id="consumehis-detail">
+
+        </div>
+    </div>
+</div>
+</body>
+</html>

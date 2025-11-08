@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>电影</title>
+    <!-- Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.css"/>
+    <!-- font-asesome图标库 -->
+    <link rel="stylesheet" type="text/css" href="/css/font-awesome.min.css"/>
+
+    <!-- 引入css样式文件 -->
+    <link rel="stylesheet" type="text/css" href="/css/common.css"/>
+    <link rel="stylesheet" type="text/css" href="/js/UserHome/UserHome.css"/>
+    <link rel="stylesheet" type="text/css" href="/js/components/MoviePoster/MoviePoster.css"/>
+    <link rel="stylesheet" type="text/css" href="/js/components/UserHeader/UserHeader.css"/>
+    <link rel="stylesheet" type="text/css" href="/js/UserHome/MovieRank/MovieRankItem/MovieRankItem.css"/>
+    <link rel="stylesheet" type="text/css" href="/js/UserHome/MovieRank/MovieRank.css"/>
+    <link rel="stylesheet" type="text/css" href="/js/UserHome/HotMovies/HotMovies.css"/>
+    <link rel="stylesheet" type="text/css" href="/js/UserHome/ComingMovies/ComingMovies.css"/>
+    <link rel="stylesheet" type="text/css" href="/js/components/Banner/Banner.css"/>
+
+    <!-- 引入js脚本文件 -->
+    <!-- jquery -->
+    <script src="/js/jquery.js"></script>
+    <!-- Bootstrap 核心 JavaScript 文件 -->
+    <script src="/js/bootstrap.js"></script>
+    <script src="/js/request.js"></script>
+    <script src="/js/Component.js"></script>
+    <script src="/js/components/UserHeader/UserHeader.js"></script>
+    <script src="/js/components/MoviePoster/MoviePoster.js"></script>
+    <script src="/js/UserHome/MovieRank/MovieRank.js"></script>
+    <script src="/js/UserHome/MovieRank/MovieRankItem/MovieRankItem.js"></script>
+    <script src="/js/UserHome/HotMovies/HotMovies.js"></script>
+    <script src="/js/components/Banner/Banner.js"></script>
+    <script src="/js/UserHome/ComingMovies/ComingMovies.js"></script>
+    <script src="/js/UserHome/UserHome.js"></script>
+
+</head>
+<body>
+    <div id="nav-top-container"></div>
+    <div id="user-home-wrapper"></div>
+    <script>
+        //延迟1s否则组件js未执行完毕
+        setTimeout(function () {
+            //轮播Banner自动滚动(在组件里实在实现不了)
+            var timers = [];
+            let firstTimer = setInterval(function () {
+                $(".banner-3").click();
+            },3000);
+            timers.push(firstTimer);
+            $('#user-home-banner').mouseenter(function () {
+                for (let t of timers) {
+                    clearInterval(t);
+                }
+            });
+            $('#user-home-banner').mouseleave(function () {
+                let timer = setInterval(function () {
+                    $(".banner-3").click();
+                },3000);
+                timers.push(timer);
+            });
+        },1000);
+    </script>
+</body>
+</html>

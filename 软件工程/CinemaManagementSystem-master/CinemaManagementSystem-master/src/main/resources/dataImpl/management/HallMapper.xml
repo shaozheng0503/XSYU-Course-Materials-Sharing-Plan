@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.cinema.data.management.HallMapper">
+    <select id="selectAllHall" resultMap="Hall">
+        select *
+        from hall
+    </select>
+
+    <select id="selectHallById" resultMap="Hall">
+        select *
+        from hall
+        where id = #{hallId}
+    </select>
+
+    <select id="getHallsExcept" parameterType="int" resultType="com.example.cinema.po.Hall">
+        select * from hall
+        <if test="hallIds.size() != 0">
+            where id not in
+            <foreach collection="hallIds" item="hallId" index="index" separator="," open="(" close=")">
+                #{hallId}
+            </foreach>
+        </if>
+    </select>
+
+    <insert id="addHall" useGeneratedKeys="true" keyProperty="id" parameterType="com.example.cinema.po.Hall">
+        insert into hall (name, seats, scale)
+        values (#{name}, #{seats}, #{scale})
+    </insert>
+
+    <delete id="removeHallById">
+        delete
+        from hall
+        where id = #{hallId}
+    </delete>
+
+    <update id="updateHall" parameterType="com.example.cinema.po.Hall">
+        update hall
+        set name=#{name},
+            seats=#{seats},
+            scale=#{scale}
+        where id = #{id}
+    </update>
+
+    <select id="checkHallName" resultType="int">
+        select count(id)
+        from hall
+        where name = #{hallName}
+          and id != #{hallId}
+    </select>
+
+    <resultMap id="Hall" type="com.example.cinema.po.Hall">
+    </resultMap>
+
+</mapper>

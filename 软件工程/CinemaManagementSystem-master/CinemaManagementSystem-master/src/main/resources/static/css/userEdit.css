@@ -1,0 +1,24 @@
+.form-group {
+    margin-bottom: 0px;
+}
+
+.card {
+    margin-right: 25%;
+    margin-left: 25%;
+    padding: 30px 40px;
+    color: #444444;
+    margin-bottom: 40px;
+}
+
+.edit-container {
+    padding: 20px;
+}
+
+.edit-card {
+    margin: 0 auto;
+    width: 90%;
+}
+
+.btn-wrapper {
+    text-align: center;
+}

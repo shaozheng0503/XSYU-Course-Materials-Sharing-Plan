@@ -1,0 +1,11 @@
+.activity-container {
+    display: flex;
+    width: 100%;
+    min-height: 200px;
+    margin: 20px 0;
+}
+
+.content-header {
+    display: flex;
+    justify-content: space-between;
+}

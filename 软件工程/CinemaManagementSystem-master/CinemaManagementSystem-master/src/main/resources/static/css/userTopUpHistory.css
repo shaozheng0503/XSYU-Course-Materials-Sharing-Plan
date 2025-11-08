@@ -1,0 +1,43 @@
+.card .table-wrapper {
+    padding: 20px;
+}
+
+.table-wrapper .table th {
+    text-align: center;
+}
+
+.table-wrapper .table td{
+    height: 60px;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.card {
+    padding: 30px 40px;
+    color: #444444;
+    margin-bottom: 40px;
+}
+
+.card .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px 0 5px 0;
+}
+
+.card .header .title {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+#accordion {
+    padding: 20px;
+}
+
+#no-his-caption {
+    text-align: center;
+    vertical-align: middle;
+    font-size: 36px;
+    color: grey;
+}

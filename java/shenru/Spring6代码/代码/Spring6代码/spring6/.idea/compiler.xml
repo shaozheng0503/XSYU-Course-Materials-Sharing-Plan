@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="spring-jdbc-tx" />
+        <module name="spring6-ioc-xml" />
+        <module name="spring6-i18n" />
+        <module name="spring6-resources" />
+        <module name="spring6-junit" />
+        <module name="atguigu-spring" />
+        <module name="spring6-aop" />
+        <module name="spring-first" />
+        <module name="spring6-reflect" />
+        <module name="spring6-validator" />
+        <module name="spring6-ioc-annotation" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="guigu-spring" target="17" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

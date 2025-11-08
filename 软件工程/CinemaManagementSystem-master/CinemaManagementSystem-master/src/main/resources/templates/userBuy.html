@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>购票</title>
+    <!-- Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.css"/>
+    <!-- font-asesome图标库 -->
+    <link rel="stylesheet" type="text/css" href="/css/font-awesome.min.css"/>
+
+    <!-- 引入css样式文件 -->
+    <link rel="stylesheet" type="text/css" href="/css/common.css"/>
+    <link rel="stylesheet" type="text/css" href="/js/components/UserHeader/UserHeader.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/userBuy.css"/>
+
+    <!-- 引入js脚本文件 -->
+    <!-- jquery -->
+    <script src="/js/jquery.js"></script>
+    <!-- Bootstrap 核心 JavaScript 文件 -->
+    <script src="/js/bootstrap.js"></script>
+    <script src="/js/request.js"></script>
+    <script src="/js/Component.js"></script>
+    <script src="/js/components/UserHeader/UserHeader.js"></script>
+    <script src="/js/userBuy.js"></script>
+
+</head>
+<body>
+<div id="nav-top-container"></div>
+<div class="content-container">
+    <div class="card">
+        <div class="header">
+            <div class="title">购票记录</div>
+        </div>
+        <div class="table-wrapper">
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th>电影名称</th>
+                    <th>影厅名</th>
+                    <th>座位</th>
+                    <th>放映时间</th>
+                    <th>预计结束时间</th>
+                    <th>下单时间</th>
+                    <th>状态</th>
+                    <th>操作</th>
+                </tr>
+                </thead>
+                <tbody id="ticket-list"></tbody>
+            </table>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.cinema.data.promotion.CardTypeMapper">
+    <insert id="insertOneCard" parameterType="com.example.cinema.po.CardType"
+            useGeneratedKeys="true" keyProperty="id">
+        insert into card_type(card_name,price,description,top_up_target,top_up_discount,ticket_target,ticket_discount)
+        values(#{name},#{price},#{description},#{topUpTarget},#{topUpDiscount},#{ticketTarget},#{ticketDiscount})
+    </insert>
+
+    <select id="selectAllCards" resultMap="CardType">
+        select * from card_type where state = 1
+    </select>
+
+    <select id="selectCardById" resultMap="CardType">
+        select * from card_type where id=#{id}
+    </select>
+
+    <update id="deleteCardById">
+        update card_type set state = 0 where id=#{cardId}
+    </update>
+
+    <update id="updateCardById">
+        update card_type
+        set price=#{cardType.price},description=#{cardType.description},
+        top_up_target=#{cardType.topUpTarget},top_up_discount=#{cardType.topUpDiscount},
+        ticket_target=#{cardType.ticketTarget},ticket_discount=#{cardType.ticketDiscount}
+        where id=#{cardId}
+    </update>
+
+    <resultMap id="CardType" type="com.example.cinema.po.CardType">
+        <result column="id" property="id"></result>
+        <result column="card_name" property="name"></result>
+        <result column="price" property="price"></result>
+        <result column="description" property="description"></result>
+        <result column="top_up_target" property="topUpTarget"></result>
+        <result column="top_up_discount" property="topUpDiscount"></result>
+        <result column="ticket_target" property="ticketTarget"></result>
+        <result column="ticket_discount" property="ticketDiscount"></result>
+    </resultMap>
+</mapper>

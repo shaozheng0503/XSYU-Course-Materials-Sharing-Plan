@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="51b99af5-848a-4e14-9b35-c62ae5ac5614" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="spring-beans.schema" />
+        <option value="AnnotationType" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2IfHs8JGAG3xKzuLBNLFah9ByJK" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "jdk.selected.JAVA_MODULE": "17 (2)",
+    "last_opened_file_path": "C:/Users/Administrator/Desktop/springcode/spring6/spring6-validator/src/main/java/com/atguigu/spring6/validator",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "File.Encoding",
+    "spring.configuration.checksum": "904009c6d94512f82451d2fa90969872"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Administrator\Desktop\springcode\spring6\spring6-validator\src\main\java\com\atguigu\spring6\validator" />
+      <recent name="C:\Users\Administrator\Desktop\springcode\spring6\spring6-validator\src\main\resources" />
+      <recent name="C:\Users\Administrator\Desktop\springcode\spring6\spring6-resources\src\main\resources\guigu" />
+      <recent name="C:\Users\Administrator\Desktop\springcode\spring6" />
+      <recent name="C:\Users\Administrator\Desktop\springcode\spring6\spring-jdbc-tx\src\main\java\com\atguigu\spring6\xmltx" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.atguigu.spring6.validator.two" />
+      <recent name="com.atguigu.spring6.springi18n" />
+      <recent name="com.atguigu.spring6.resource" />
+      <recent name="com.atguigu.spring6.iocxml.ditest" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.TestUser">
+    <configuration name="TestUser" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.atguigu.spring6.validator.three.TestUser" />
+      <module name="spring6-validator" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.atguigu.spring6.validator.three.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestMethod2.testMyService1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="spring6-validator" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.atguigu.spring6.validator.method2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.atguigu.spring6.validator.method2" />
+      <option name="MAIN_CLASS_NAME" value="com.atguigu.spring6.validator.method2.TestMethod2" />
+      <option name="METHOD_NAME" value="testMyService1" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestMethod2.testMyService2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="spring6-validator" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.atguigu.spring6.validator.method2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.atguigu.spring6.validator.method2" />
+      <option name="MAIN_CLASS_NAME" value="com.atguigu.spring6.validator.method2.TestMethod2" />
+      <option name="METHOD_NAME" value="testMyService2" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestUser.testValidationOne" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="spring6-validator" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.atguigu.spring6.validator.two.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.atguigu.spring6.validator.two" />
+      <option name="MAIN_CLASS_NAME" value="com.atguigu.spring6.validator.two.TestUser" />
+      <option name="METHOD_NAME" value="testValidationOne" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestUser.testValidationTwo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="spring6-validator" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.atguigu.spring6.validator.two.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.atguigu.spring6.validator.two" />
+      <option name="MAIN_CLASS_NAME" value="com.atguigu.spring6.validator.two.TestUser" />
+      <option name="METHOD_NAME" value="testValidationTwo" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.TestUser" />
+        <item itemvalue="JUnit.TestUser.testValidationTwo" />
+        <item itemvalue="JUnit.TestMethod2.testMyService2" />
+        <item itemvalue="JUnit.TestMethod2.testMyService1" />
+        <item itemvalue="JUnit.TestUser.testValidationOne" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="51b99af5-848a-4e14-9b35-c62ae5ac5614" name="Changes" comment="" />
+      <created>1670565923788</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1670565923788</updated>
+      <workItem from="1670565925254" duration="6284000" />
+      <workItem from="1670636667138" duration="3808000" />
+      <workItem from="1670805721263" duration="13732000" />
+      <workItem from="1670891381236" duration="16826000" />
+      <workItem from="1670982646805" duration="9413000" />
+      <workItem from="1671067241149" duration="19616000" />
+      <workItem from="1671153634337" duration="12470000" />
+      <workItem from="1671192628379" duration="37000" />
+      <workItem from="1671192676433" duration="5847000" />
+      <workItem from="1671244349824" duration="20289000" />
+      <workItem from="1671329131898" duration="23388000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/atguigu-spring/src/main/java/com/atguigu/bean/AnnotationApplicationContext.java</url>
+          <line>35</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

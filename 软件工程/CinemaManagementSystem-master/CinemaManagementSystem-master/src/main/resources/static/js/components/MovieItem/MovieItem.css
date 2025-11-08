@@ -1,0 +1,12 @@
+#movie-item-container {
+    border: 1px solid #88888820;
+}
+
+#movie-item-container:hover {
+    cursor: pointer;
+
+    box-shadow: 1px 1px 6px #888888;
+    border: 1px solid #88888880;
+    transition: all 0.3s ease-in-out;
+    background-color: rgba(0, 0, 0, 0.02);
+}

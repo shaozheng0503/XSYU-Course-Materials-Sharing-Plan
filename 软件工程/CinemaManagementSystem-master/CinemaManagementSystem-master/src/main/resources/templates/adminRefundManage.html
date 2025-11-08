@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>退票管理</title>
+    <link rel="stylesheet" type="text/css" href="/css/common.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/font-awesome.min.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/refundList.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/adminRefund.css"/>
+
+    <script src="/js/jquery.js"></script>
+    <script src="/js/bootstrap.js"></script>
+    <script src="/js/request.js"></script>
+    <script src="/js/Component.js"></script>
+    <script src="/js/components/AdminPanel.js"></script>
+    <script src="/js/adminRefundManage.js"></script>
+
+</head>
+<body>
+<div class="main-container">
+    <div class="nav-left-container"></div>
+    <div class="content-container">
+        <div class="content-header">
+            <span class="title gray-text">退票策略</span>
+            <button type="button" class="btn btn-primary" data-backdrop="static" data-toggle="modal" data-target="#refundModal" id="refund-modal-btn"><i class="icon-plus-sign"></i> 添加退票策略</button>
+        </div>
+        <ul class="refund-on-list">
+        </ul>
+    </div>
+</div>
+<div class="modal fade" id="refundModal" tabindex="-1" role="dialog" aria-labelledby="refundModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="refundModalLabel">添加退票策略</h4>
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal" role="form">
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label" for="refund-movie-input">参与电影</label>
+                        <div class="col-sm-10">
+                            <select id="refund-movie-input" class="form-control">
+                            </select>
+                            <p class="help-block">不选择代表所有电影</p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label" for="refund-movie-input">已选电影</label>
+                        <div id="selected-movies" class="col-sm-10">
+
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label" for="refund-time-input"><span class="error-text">*</span>退票时间</label>
+                        <div class="col-sm-10">
+                            <input type="number" class="form-control" id="refund-time-input" placeholder="请输入此策略适用退票时间">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label" for="refund-price-input"><span class="error-text">*</span>价格折算</label>
+                        <div class="col-sm-10">
+                            <input type="number" class="form-control" id="refund-price-input" placeholder="请输入折算百分比，1-100之间的整数">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                <button type="button" class="btn btn-primary" id="refund-form-btn">确认</button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

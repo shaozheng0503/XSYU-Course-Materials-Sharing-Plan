@@ -1,0 +1,21 @@
+.table-wrapper {
+    padding: 20px;
+}
+
+.table-wrapper .table td{
+    height: 60px;
+    vertical-align: middle;
+}
+
+.table {
+    text-align: center;
+}
+
+.table thead tr th {
+    text-align: center;
+}
+
+.content-header {
+    display: flex;
+    justify-content: space-between;
+}

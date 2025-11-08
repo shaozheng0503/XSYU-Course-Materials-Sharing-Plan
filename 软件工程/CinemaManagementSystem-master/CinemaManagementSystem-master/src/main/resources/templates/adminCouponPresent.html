@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>赠送优惠券</title>
+    <link rel="stylesheet" type="text/css" href="/css/common.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap-table.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/font-awesome.min.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/adminCouponPresent.css"/>
+
+
+    <script src="/js/jquery.js"></script>
+    <script src="/js/bootstrap.js"></script>
+    <script src="/js/bootstrap-table.js"></script>
+    <script src="/js/bootstrap-table-zh-CN.js"></script>
+    <script src="/js/request.js"></script>
+    <script src="/js/Component.js"></script>
+    <script src="/js/components/AdminPanel.js"></script>
+    <script src="/js/adminCouponPresent.js"></script>
+
+</head>
+<body>
+<div class="main-container">
+    <div class="nav-left-container"></div>
+    <div class="content-container">
+        <div class="content-item">
+            <span class="title gray-text">选择将被赠送的会员</span>
+            <div class="content-card card">
+                <div class="panel panel-default">
+                    <div class="panel-heading">查询条件</div>
+                    <div class="panel-body">
+                        <div class="form-group" style="margin-top:15px">
+                            <div class="col-sm-2" style="text-align:right">
+                                <label class="control-label" for="total_consume_input">总消费金额：</label>
+                            </div>
+                            <div class="col-sm-4" style="text-align:left">
+                                <input type="number" class="form-control" id="total_consume_input" value="0">
+                            </div>
+                            <div class="col-sm-3" style="text-align:right">
+                                <button type="button" id="query_btn" class="btn btn-primary">查询</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <table id="user-table"></table>
+            </div>
+        </div>
+        <div class="content-item">
+            <span class="title gray-text">选择优惠券</span>
+            <div class="content-card card">
+                <table id="coupon-table"></table>
+            </div>
+        </div>
+        <button type="button" id="present_btn" class="btn btn-primary">赠送</button>
+    </div>
+</div>
+
+</body>
+</html>

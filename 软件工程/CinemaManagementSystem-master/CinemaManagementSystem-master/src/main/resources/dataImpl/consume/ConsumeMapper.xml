@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.cinema.data.consume.ConsumeMapper">
+
+    <select id="getTopUpHistoryByUserId" resultMap="TopUpHistpry">
+        SELECT * FROM topup_history WHERE user_id=#{userId}
+    </select>
+
+    <select id="getConsumeHistoryByUserId" resultMap="ConsumeHistory">
+        SELECT * FROM consume_history WHERE user_id=#{userId}
+    </select>
+
+    <select id="getConsumeHistoryById" resultMap="ConsumeHistory">
+        SELECT * FROM consume_history WHERE id=#{id}
+    </select>
+
+    <insert id="insertTopUpHistory">
+        INSERT INTO topup_history(user_id, money, discount, balance, time)
+        VALUES (#{user_id},#{money},#{discount},#{balance},#{time})
+    </insert>
+
+    <insert id="insertConsumeHistory">
+        INSERT INTO consume_history(user_id, money, discount, consumeType, type, contentId)
+        VALUES (#{user_id},#{money},#{discount},#{consumeType},#{type},#{contentId})
+    </insert>
+
+    <select id="selectConsumeQulifiedUsers" resultMap="totalConsumeUser">
+        select * from (select userId, username, total_top+total_con as total from (select id as userId, username, ifnull(total_con,0) as total_con from user
+	      left join (select user_id,sum(money) as total_con from consume_history group by user_id) t1
+	      on user.id = t1.user_id) s1
+		    left join (select id, ifnull(total_top,0) as total_top from user
+			  left join (select user_id,sum(money) as total_top from topup_history group by user_id) t2
+			  on user.id = t2.user_id) s2 on s1.userId = s2.id) h where total > #{totalConsume} order by total desc
+    </select>
+
+    <select id="getConsumeHistoryByTicketId" resultType="int">
+        select id from consume_history where contentId=#{ticketId}
+    </select>
+
+    <select id="getTicketIdsByConsumeId" resultType="java.lang.Integer">
+        select ticket_id from consume_ticket where consume_id=#{consumeId}
+    </select>
+
+    <resultMap id="TopUpHistpry" type="com.example.cinema.po.TopUpHistory"></resultMap>
+
+    <resultMap id="ConsumeHistory" type="com.example.cinema.po.ConsumeHistory"></resultMap>
+
+    <resultMap id="totalConsumeUser" type="com.example.cinema.vo.TotalConsumeUser"></resultMap>
+
+</mapper>

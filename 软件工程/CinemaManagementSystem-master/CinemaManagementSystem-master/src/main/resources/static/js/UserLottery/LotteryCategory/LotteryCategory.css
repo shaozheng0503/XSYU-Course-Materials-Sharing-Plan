@@ -1,0 +1,51 @@
+#user-lottery-category{
+ width: 100%;
+}
+
+#user-lottery-category > div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-evenly;
+}
+
+.lottery-category {
+    background-image: url("../../../images/couponBackground.png");
+    background-size: 100% 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 22%;
+    height: 150px;
+}
+
+.lottery-category-chosen {
+    background-image: url("../../../images/couponChoose.png");
+    background-size: 100% 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 22%;
+    height: 150px;
+}
+
+.lottery-category-description {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.lottery-category-name {
+    font-weight: bold;
+    font-size: 28px;
+}
+
+.lottery-category-price {
+    font-style: italic;
+    font-size: 16px;
+    margin-bottom: 10%;
+}

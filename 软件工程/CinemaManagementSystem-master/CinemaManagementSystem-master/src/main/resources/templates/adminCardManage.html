@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>活动管理</title>
+    <link rel="stylesheet" type="text/css" href="/css/common.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/font-awesome.min.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/adminCard.css"/>
+
+
+    <script src="/js/jquery.js"></script>
+    <script src="/js/bootstrap.js"></script>
+    <script src="/js/request.js"></script>
+    <script src="/js/Component.js"></script>
+    <script src="/js/components/AdminPanel.js"></script>
+    <script src="/js/adminCardManage.js"></script>
+
+</head>
+<body>
+<div class="main-container">
+    <div class="nav-left-container"></div>
+    <div class="content-container">
+        <div class="content-header">
+            <span class="title gray-text">会员卡管理</span>
+            <button type="button" class="btn btn-primary" data-backdrop="static" data-toggle="modal" data-target="#cardModal"><i class="icon-plus-sign"></i> 发布会员卡</button>
+        </div>
+        <div class="content-cards">
+
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="cardModal" tabindex="-1" role="dialog" aria-labelledby="movieModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="cardModalLabel">发布会员卡</h4>
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal" role="form">
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label" for="card-name-input"><span class="error-text">*</span>会员卡名称</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="card-name-input" placeholder="请输入会员卡名称">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label" for="card-description-input">会员卡描述</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="card-description-input" placeholder="请输入会员卡描述">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label" for="card-price-input"><span class="error-text">*</span>会员卡价格</label>
+                        <div class="col-sm-9">
+                            <input type="number" class="form-control" id="card-price-input" placeholder="请输入会员卡价格">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label" for="card-topUp-target-input"><span class="error-text">*</span>购卡需满金额</label>
+                        <div class="col-sm-9">
+                            <input type="number" class="form-control" id="card-topUp-target-input" placeholder="请输入购卡需满金额">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label" for="card-topUp-discount-input"><span class="error-text">*</span>购卡优惠金额</label>
+                        <div class="col-sm-9">
+                            <input type="number" class="form-control" id="card-topUp-discount-input" placeholder="请输入购卡优惠金额">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label" for="card-ticket-target-input"><span class="error-text">*</span>购票需满金额</label>
+                        <div class="col-sm-9">
+                            <input type="number" class="form-control" id="card-ticket-target-input" placeholder="请输入购票需满金额">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label" for="card-ticket-discount-input"><span class="error-text">*</span>购票优惠金额</label>
+                        <div class="col-sm-9">
+                            <input type="number" class="form-control" id="card-ticket-discount-input" placeholder="请输入购票优惠金额">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                <button type="button" class="btn btn-primary" id="card-form-btn">确认</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="cardEditModal" tabindex="-1" role="dialog" aria-labelledby="movieModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">修改会员卡</h4>
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal" role="form">
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label" for="card-edit-name-input"><span class="error-text">*</span>会员卡名称</label>
+                        <div class="col-sm-9">
+                            <input readonly="readonly" type="text" class="form-control" id="card-edit-name-input" placeholder="请输入会员卡名称">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label" for="card-edit-description-input">会员卡描述</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="card-edit-description-input" placeholder="请输入会员卡描述">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label" for="card-edit-price-input"><span class="error-text">*</span>会员卡价格</label>
+                        <div class="col-sm-9">
+                            <input type="number" class="form-control" id="card-edit-price-input" placeholder="请输入会员卡价格">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label" for="card-edit-topUp-target-input"><span class="error-text">*</span>购卡需满金额</label>
+                        <div class="col-sm-9">
+                            <input type="number" class="form-control" id="card-edit-topUp-target-input" placeholder="请输入购卡需满金额">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label" for="card-edit-topUp-discount-input"><span class="error-text">*</span>购卡优惠金额</label>
+                        <div class="col-sm-9">
+                            <input type="number" class="form-control" id="card-edit-topUp-discount-input" placeholder="请输入购卡优惠金额">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label" for="card-edit-ticket-target-input"><span class="error-text">*</span>购票需满金额</label>
+                        <div class="col-sm-9">
+                            <input type="number" class="form-control" id="card-edit-ticket-target-input" placeholder="请输入购票需满金额">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label" for="card-edit-ticket-discount-input"><span class="error-text">*</span>购票优惠金额</label>
+                        <div class="col-sm-9">
+                            <input type="number" class="form-control" id="card-edit-ticket-discount-input" placeholder="请输入购票优惠金额">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                <button type="button" class="btn btn-primary" id="card-edit-btn">确认</button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

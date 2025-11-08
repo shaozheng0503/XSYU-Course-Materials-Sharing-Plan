@@ -1,0 +1,37 @@
+.card-container {
+    display: flex;
+    width: 100%;
+    min-height: 200px;
+    margin: 20px 0;
+}
+.card-card {
+    padding: 20px;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.card-line {
+    display: flex;
+    align-items: baseline;
+}
+
+.content-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.title-line{
+    margin-bottom: 10px;
+}
+
+.card-change-btn {
+    float: right;
+    margin-right: 10px;
+}
+
+.card-delete-btn {
+    float: right;
+    margin-right: 10px;
+}

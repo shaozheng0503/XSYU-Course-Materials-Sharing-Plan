@@ -1,0 +1,32 @@
+.table-wrapper {
+    padding: 20px;
+    padding-bottom: 5px;
+}
+
+.table-wrapper .table b {
+    color: #1caf9a;
+    font-size: 20px;
+}
+
+.table-wrapper .table td{
+    height: 60px;
+    vertical-align: middle;
+}
+
+.activity-show {
+    display: flex;
+    flex-direction: row;
+    background-color: whitesmoke;
+    padding-left: 20px;
+}
+
+.activity-name {
+    font-size: 20px;
+    padding-top: 5px;
+    padding-right: 20px;
+}
+
+.activity-content {
+    padding-top: 9px;
+    padding-left: 10px;
+}

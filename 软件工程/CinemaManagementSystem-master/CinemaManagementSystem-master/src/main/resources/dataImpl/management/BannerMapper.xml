@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.cinema.data.management.BannerMapper">
+
+    <select id="selectBannerInfo" resultMap="BannerInfo">
+        SELECT * FROM banner
+    </select>
+
+    <update id="updateBannerInfo">
+        UPDATE banner SET
+          img1=#{info.img1},navi1=#{info.navi1},
+          img2=#{info.img2},navi2=#{info.navi2},
+          img3=#{info.img3},navi3=#{info.navi3}
+    </update>
+
+    <resultMap id="BannerInfo" type="com.example.cinema.po.BannerInfo">
+    </resultMap>
+
+</mapper>

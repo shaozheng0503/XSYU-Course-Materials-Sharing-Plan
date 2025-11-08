@@ -1,0 +1,65 @@
+#movie-rank-item-container {
+    display: flex;
+    justify-content: space-between;
+
+    height: 35px;
+    line-height: 35px;
+    padding: 2px 5px 2px;
+}
+
+#movie-rank-item-container:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.03);
+}
+
+#movie-rank-item-left {
+    display: flex;
+    justify-content: left;
+    /*防止文本过长将父容器撑开*/
+    width: 250px;
+}
+
+#movie-rank-item-index {
+    /*font-size: 18px;*/
+    font-style: italic;
+    font-weight: bold;
+    width: 26px;
+}
+
+#movie-rank-item-name {
+    /*font-size: 16px;*/
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#movie-rank-item-value {
+    color: #ef4238;
+}
+
+/*======================================================*/
+
+.movie-rank-item-index-others {
+    color: #999;
+    font-size: 18px;
+}
+
+.movie-rank-item-name-others {
+    font-size: 16px;
+}
+
+.movie-rank-item-top {
+    color: #ef4238;
+}
+
+.movie-rank-item-top1 {
+    font-size: 22px;
+}
+
+.movie-rank-item-top2 {
+    font-size: 20px;
+}
+
+.movie-rank-item-top3 {
+    font-size: 18px;
+}

@@ -1,0 +1,60 @@
+.card {
+    padding: 30px 40px;
+    color: #444444;
+    margin-bottom: 40px;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.card .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px 0 5px 0;
+}
+
+.card .header .title {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+#consumehis-detail {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.detail-type-title {
+    text-align: center;
+    vertical-align: middle;
+    font-size: 28px;
+    font-weight: bold;
+    padding-bottom: 20px;
+}
+
+.detail-wrapper {
+    display: flex;
+    justify-content: center;
+
+}
+
+.detail-col-one {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+}
+
+.detail-col-two {
+    display: flex;
+    flex-direction: column;
+    margin-left: 250px;
+}
+
+.detail-txt {
+    font-size: 16px;
+    padding-bottom: 10px;
+}
+
+
+

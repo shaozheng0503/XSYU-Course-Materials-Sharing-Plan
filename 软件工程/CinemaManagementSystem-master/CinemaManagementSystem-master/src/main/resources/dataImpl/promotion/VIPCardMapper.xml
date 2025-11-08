@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.cinema.data.promotion.VIPCardMapper">
+    <insert id="insertOneCard" parameterType="com.example.cinema.po.VIPCard"
+            useGeneratedKeys="true" keyProperty="id">
+        insert into vip_card(user_id,type_id,balance)
+        values(#{userId},#{cardTypeId},#{balance})
+    </insert>
+
+    <select id="selectCardById" resultMap="VIPCard">
+        select * from vip_card where id=#{id} and state = 1
+    </select>
+
+    <select id="selectCardByUserId" resultMap="VIPCard">
+        select * from vip_card where user_id=#{userId} and state = 1
+    </select>
+
+    <select id="selectSingleCard" resultMap="VIPCard">
+        SELECT * FROM vip_card WHERE id=#{id}
+    </select>
+
+    <update id="updateCardBalance" >
+        update vip_card set balance = #{balance} where id=#{id}
+    </update>
+
+    <update id="deleteCardById" >
+        update vip_card set state = 0 where id=#{userId}
+    </update>
+
+    <resultMap id="VIPCard" type="com.example.cinema.po.VIPCard">
+        <result column="id" property="id"></result>
+        <result column="user_id" property="userId"></result>
+        <result column="balance" property="balance"></result>
+        <result column="type_id" property="cardTypeId"></result>
+        <result column="join_time" property="joinDate"></result>
+        <association property="cardType" column="type_id" select="com.example.cinema.data.promotion.CardTypeMapper.selectCardById"></association>
+    </resultMap>
+
+
+
+</mapper>

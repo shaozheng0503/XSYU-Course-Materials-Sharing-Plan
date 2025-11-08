@@ -1,0 +1,35 @@
+#user-lottery-container {
+    display: flex;
+    justify-content: center;
+}
+
+#user-lottery-container > div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    text-align: center;
+}
+
+#user-lottery-container > div > div{
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+
+#user-lottery-name {
+    color: #1caf9a;
+    font: 700 30px "Comic Sans MS";
+}
+
+#lottery-coupon-container > div {
+    display:table;
+    width:100%;
+    height:100%;
+    position:fixed;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    z-index:9999;
+}

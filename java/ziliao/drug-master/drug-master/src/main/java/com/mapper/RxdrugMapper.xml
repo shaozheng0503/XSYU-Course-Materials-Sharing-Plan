@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mapper.RxdrugMapper">
+		<insert id="AddRxdrug" parameterType="Rxdrug">
+				insert into rxdrug values(#{time},#{drugname},#{changshang},#{date},#{pihao},#{count})
+		</insert>
+		<delete id="DelRxdrug">
+				delete from rxdrug where `time` = #{time}
+		</delete>
+		<select id="GetIt" resultType="Rxdrug">
+				select * from rxdrug where `time` = #{time}
+		</select>
+		<select id="CountNullRx" resultType="java.lang.Integer"> <!-- 查未记录填写的处方药记录条数 -->
+--             SELECT COUNT(*)
+--             FROM (SELECT a.time
+--             FROM (SELECT rxd.time, rxp.time AS timetwo, rxp.`name`
+--             FROM rxdrug rxd
+--             LEFT JOIN rxperson rxp ON rxd.time = rxp.time) a
+--             WHERE a.timetwo IS NULL
+--             AND a.`name` IS NULL
+--             GROUP BY a.time) b;
+			SELECT COUNT(DISTINCT rxd.time)
+			FROM rxdrug rxd
+			LEFT JOIN rxperson rxp ON rxd.time = rxp.time AND rxp.`name` IS NOT NULL
+			WHERE rxp.time IS NULL;
+        </select>
+		<select id="GetAllOverTime" resultType="java.lang.String">
+            SELECT rxdrug.time
+            FROM rxdrug
+                     LEFT JOIN rxperson ON rxdrug.time = rxperson.time
+            WHERE rxperson.`name` IS NULL
+              AND rxperson.time IS NULL
+            GROUP BY rxdrug.time;
+        </select>
+		<select id="GetSomeDrugTime" resultType="java.lang.String">
+				SELECT time from rxdrug 
+				where rxdrug.time in 
+				(SELECT rxdrug.time from rxdrug,rxperson where rxdrug.time = rxperson.time group by time) 
+				and rxdrug.drugname like "%"#{time}"%" GROUP BY time
+		</select>
+</mapper>

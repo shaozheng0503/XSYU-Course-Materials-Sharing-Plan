@@ -1,0 +1,15 @@
+.table-container {
+    width: 100%;
+    height:380px;
+    margin: 20px 0;
+}
+
+#popular-movie-container {
+    text-align: center;
+    vertical-align: middle;
+}
+
+#popular-movie-container p {
+    font-size: 28px;
+    font-weight: bold;
+}

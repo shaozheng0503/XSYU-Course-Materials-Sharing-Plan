@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>充值记录</title>
+    <!-- Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.css"/>
+    <!-- font-asesome图标库 -->
+    <link rel="stylesheet" type="text/css" href="/css/font-awesome.min.css"/>
+
+    <!-- 引入css样式文件 -->
+    <link rel="stylesheet" type="text/css" href="/css/common.css"/>
+    <link rel="stylesheet" type="text/css" href="/js/components/UserHeader/UserHeader.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/userTopupHistory.css"/>
+
+    <!-- 引入js脚本文件 -->
+    <!-- jquery -->
+    <script src="/js/jquery.js"></script>
+    <!-- Bootstrap 核心 JavaScript 文件 -->
+    <script src="/js/bootstrap.js"></script>
+    <script src="/js/request.js"></script>
+    <script src="/js/Component.js"></script>
+    <script src="/js/components/UserHeader/UserHeader.js"></script>
+    <script src="/js/userTopUpHistory.js"></script>
+
+</head>
+<body>
+<div id="nav-top-container"></div>
+<div class="content-container">
+    <div class="card col-md-offset-2 col-md-8">
+        <div class="header">
+            <div class="title">充值记录</div>
+        </div>
+        <div class="table-wrapper">
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th>充值金额</th>
+                    <th>优惠金额</th>
+                    <th>充值时间</th>
+                    <th>会员卡余额</th>
+                </tr>
+                </thead>
+                <tbody id="topup-his-list"></tbody>
+            </table>
+        </div>
+        <div id="no-his-caption" style="visibility: hidden">暂时没有充值记录</div>
+    </div>
+</div>
+</body>
+</html>

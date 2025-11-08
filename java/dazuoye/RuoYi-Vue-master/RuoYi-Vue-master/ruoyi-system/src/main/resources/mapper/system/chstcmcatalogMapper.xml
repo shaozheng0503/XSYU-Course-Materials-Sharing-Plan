@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ruoyi.system.mapper.chstcmcatalogMapper">
+
+    <resultMap type="chstcmcatalog" id="chstcmcatalogResult">
+        <result property="id"    column="id"    />
+        <result property="level1"    column="level1"    />
+        <result property="level2"    column="level2"    />
+        <result property="level3"    column="level3"    />
+        <result property="type"    column="type"    />
+        <result property="drugName"    column="drugName"    />
+        <result property="constrain"    column="constrain"    />
+    </resultMap>
+
+    <sql id="selectchstcmcatalogVo">
+        select id, level1, level2, level3, type, drugName, constrain from chstcmcatalog
+    </sql>
+
+    <select id="selectchstcmcatalogList" parameterType="chstcmcatalog" resultMap="chstcmcatalogResult">
+        <include refid="selectchstcmcatalogVo"/>
+        <where>
+            <if test="level1 != null  and level1 != ''"> and level1 = #{level1}</if>
+            <if test="level2 != null  and level2 != ''"> and level2 = #{level2}</if>
+            <if test="level3 != null  and level3 != ''"> and level3 = #{level3}</if>
+            <if test="type != null  and type != ''"> and type = #{type}</if>
+            <if test="drugName != null  and drugName != ''"> and drugName like concat('%', #{drugName}, '%')</if>
+            <if test="constrain != null  and constrain != ''"> and constrain = #{constrain}</if>
+        </where>
+    </select>
+
+    <select id="selectchstcmcatalogById" parameterType="Long" resultMap="chstcmcatalogResult">
+        <include refid="selectchstcmcatalogVo"/>
+        where id = #{id}
+    </select>
+
+    <insert id="insertchstcmcatalog" parameterType="chstcmcatalog" useGeneratedKeys="true" keyProperty="id">
+        insert into chstcmcatalog
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="level1 != null and level1 != ''">level1,</if>
+            <if test="level2 != null and level2 != ''">level2,</if>
+            <if test="level3 != null and level3 != ''">level3,</if>
+            <if test="type != null and type != ''">type,</if>
+            <if test="drugName != null and drugName != ''">drugName,</if>
+            <if test="constrain != null">constrain,</if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="level1 != null and level1 != ''">#{level1},</if>
+            <if test="level2 != null and level2 != ''">#{level2},</if>
+            <if test="level3 != null and level3 != ''">#{level3},</if>
+            <if test="type != null and type != ''">#{type},</if>
+            <if test="drugName != null and drugName != ''">#{drugName},</if>
+            <if test="constrain != null">#{constrain},</if>
+        </trim>
+    </insert>
+
+    <update id="updatechstcmcatalog" parameterType="chstcmcatalog">
+        update chstcmcatalog
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="level1 != null and level1 != ''">level1 = #{level1},</if>
+            <if test="level2 != null and level2 != ''">level2 = #{level2},</if>
+            <if test="level3 != null and level3 != ''">level3 = #{level3},</if>
+            <if test="type != null and type != ''">type = #{type},</if>
+            <if test="drugName != null and drugName != ''">drugName = #{drugName},</if>
+            <if test="constrain != null">constrain = #{constrain},</if>
+        </trim>
+        where id = #{id}
+    </update>
+
+    <delete id="deletechstcmcatalogbyid" parameterType="Long">
+        delete from chstcmcatalog where id = #{id}
+    </delete>
+
+    <delete id="deletechstcmcatalogbyids" parameterType="String">
+        delete from chstcmcatalog where id in
+        <foreach item="id" collection="array" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+</mapper>

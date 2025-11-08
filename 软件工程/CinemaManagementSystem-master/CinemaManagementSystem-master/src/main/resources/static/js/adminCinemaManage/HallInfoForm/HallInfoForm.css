@@ -1,0 +1,122 @@
+#hall-manage-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+
+/*****************************************************************************/
+
+/* 影厅名称 */
+
+#hall-manage-form-name {
+    margin-bottom: 10px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#hall-manage-form-name-label {
+    flex: none;
+}
+
+#hall-manage-form-name-input-wrapper {
+    flex: 600px;
+}
+
+#hall-manage-form-name-input {
+    margin-left: 20px;
+    width: 400px;
+}
+
+
+/*****************************************************************************/
+
+/* 影厅规格 */
+
+#hall-manage-form-scale {
+    margin-bottom: 10px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#hall-manage-form-scale-label {
+    flex: none;
+}
+
+#hall-manage-form-scale-input-wrapper {
+    flex: 600px;
+    padding-left: 20px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 300px;
+}
+
+#hall-manage-form-scale-row-input{
+    flex: 40px;
+    margin-right: 5px;
+}
+
+#hall-manage-form-scale-column-input{
+    flex: 40px;
+    margin-left: 10px;
+    margin-right: 5px;
+}
+
+#hall-manage-form-scale-confirm {
+    flex: 30px;
+    margin-left: 20px;
+}
+
+
+/*****************************************************************************/
+
+/* 影厅座位 */
+
+#hall-manage-form-seats{
+    margin-bottom: 10px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+#hall-manage-form-seats-label{
+    flex: none;
+}
+
+#hall-manage-form-seats-input-wrapper{
+    flex: 600px;
+    padding-left: 20px;
+}
+
+/*****************************************************************************/
+
+/* 提交 */
+
+#hall-manage-form-submit{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    width: 1000px;
+    padding-left: 60px;
+    padding-right: 60px;
+}
+
+#hall-manage-form-submit-button{
+    flex: 1;
+    height: 40px;
+    text-align: center;
+}

@@ -1,0 +1,164 @@
+.full-screen-background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    opacity: 0.8;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#cool-animation {
+    height: 70%;
+    margin-bottom: 6%;
+    animation-name: quickRotate, fadeOut;
+    animation-duration: 1s, 1s;
+    animation-timing-function: linear, linear;
+    animation-delay: 0s, 2s;
+    animation-iteration-count: 2, 1;
+    animation-fill-mode: forwards, forwards;
+}
+
+@keyframes quickRotate {
+    from {
+        transform: rotate(360deg);
+    }
+    to {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+#show-lottery-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    animation: fadeIn 1s linear 2s 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.show-lottery-head {
+    width: 100%;
+    height: 5%;
+    margin-top: 3%;
+    text-align: center;
+    font-size: 18px;
+}
+
+.show-lottery-head a {
+    color: white;
+}
+
+#show-lottery-coupons {
+    width: 100%;
+    height: 65%;
+    display: flex;
+    justify-content: center;
+}
+
+#show-lottery-coupons > div {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+}
+
+.coupon-item {
+    background-image: url("../../../images/couponBackground.png");
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+}
+
+.coupon-one-item {
+    width: 32%;
+    height: 48%;
+}
+
+.coupon-ten-item {
+    width: 16%;
+    height: 24%;
+    margin: 2.5% 2% 2.5% 2%;
+}
+
+.coupon-amount-wrapper {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    color: white;
+}
+
+.coupon-one-discount-amount {
+    font-weight: bold;
+    font-size: 48px;
+}
+
+.coupon-one-movie-name {
+    width: 20%;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    margin-right: 10%;
+    color: white;
+    font-size: 24px;
+}
+
+.coupon-ten-discount-amount {
+    font-weight: bold;
+    font-size: 28px;
+}
+
+.coupon-ten-movie-name {
+    width: 20%;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    margin-right: 10%;
+    color: white;
+}
+
+.show-lottery-foot {
+    display: flex;
+    justify-content: center;
+}
+
+#show-lottery-back {
+    font-size: 17px;
+}
